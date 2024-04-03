@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_form.css">
+    <title>Lending designed</title>
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navigator">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Info</a>
+                <a href="#">Service</a>
+                <a href="#">Contants</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2>Звездные Увалы<br><span>Голосование !</span></h2>
+                <p>Описание</p>
+                <a href="#" class="info-btn">More Info</a>
+            </div>
+        </div>
+        -<div class="verevka">
+            <img src="assets/verevka.png" alt="Object">
+        </div>
+    
+        <div class="container">
+            <div class="object-card">
+                <div class="image-wrapper" id="res1">
+                  <img class="screki-image" src="assets/Pris-transformed.png" alt="Object" id="pr1">
+                  <div class="card">
+                    <img src="assets/rodnik_1.jpg" alt="Object">
+                    <div class="description">
+                      <h1>Объект 1</h1>
+                      <p>Благоустройство родника 3-5 млн. рублей</p>
+                      <input id="image-checkbox" type="checkbox" onclick="toggleCheck(this, 'res1')">
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="image-wrapper" id="res2">
+                    <img class="screki-image" src="assets/Pris-transformed.png" alt="Object" id="pr2">
+                  <div class="card">
+                    <img src="assets/rodnik_2.jpg" alt="Object">
+                    <div class="description">
+                      <h1>Объект 2</h1>
+                      <p>Благоустройство родника 3-5 млн.<br> рублей</p>
+                      <input id="image-checkbox" type="checkbox" onclick="toggleCheck(this, 'res2')">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/prud_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 3</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/prud_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 4</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/stadion_1.png" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 5</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/stadion_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 6</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/trassa_downhill_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 7</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/trassa_downhill_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 8</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/trassa_tubing_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 9</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/trassa_tubing_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 10</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/trassa_tubing_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 11</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/det_plosh_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 12</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/det_plosh_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 13</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/det_plosh_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 14</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/det_plosh_4.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 15</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/oranj_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 16</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/oranj_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 17</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/ecoshkila_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 18</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/ecoshkila_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 19</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/zone_chill_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 20</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/zone_chill_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 21</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/zone_chill_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 22</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/zone_chill_4.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 23</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/picnic_place_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 24</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/picnic_place_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 25</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/picnic_place_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 26</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+            <!--<div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 27</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 28</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 29</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_4.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 30</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_5.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 31</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/besedka_6.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 32</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            --> 
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/turnilk.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 33</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+            
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/workout_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 34</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/mini_zoo_1.png" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 35</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/mini_zoo_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 36</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/mini_zoo_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 37</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/glemping_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 38</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/glemping_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 39</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/glemping_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 40</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+            
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/camping_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 41</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/camping_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 42</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/WC_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 43</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/amfiteatr_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 44</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/amfiteatr_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 45</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/liji_trassa_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 46</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/peshi_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 47</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/art_object_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 48</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/art_object_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 49</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/art_object_3.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 50</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/art_object_4.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 51</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/podemnik_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 52</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/smotr_plosh_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 53</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/lijn_baza_1.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 54</h1>
+                        <p>Благоустройство пруда (расчистка,<br>  устройство настила,
+                          установка МАФ)</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/lijn_baza_2.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 55</h1>
+                        <p>Благоустройство пруда (расчистка,<br> устройство настила, установка МАФ)</p>
+                        <input id="html4" type="checkbox">
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+            <div class="object-card">
+                <div class="image-wrapper">
+                    <div class="card">
+                      <img src="assets/Xwf0R1nVy_0.jpg" alt="Object" onclick="toggleSelection(this)">
+                      <div class="description">
+                        <h1>Объект 56</h1>
+                        <p>Zero2 +100500 к победе</p>
+  
+                        <input id="html3" type="checkbox">
+                      </div>
+                    </div>
+                  </div>                 
+                </div>
+            </div>
+
+
+
+
+            <div class="form-wrap">
+              <form method="post" action="form.php">
+                  <label for="firstname">Фамилия:</label>
+                  <input type="text" id="firstname" name="firstname" required>
+                  
+                  <label for="name">Имя:</label>
+                  <input type="text" id="name" name="name" required>
+                  
+                  <label for="lastname">Отчество:</label>
+                  <input type="text" id="lastname" name="lastname" required>
+                  
+                  <label for="datebirth">Дата рождения:</label>
+                  <input type="date" id="datebirth" name="datebirth" required>
+                  
+                  <label for="gender">Пол:</label>
+                  <div>
+                      <input type="radio" id="male" name="gender" value="male" required>
+                      <label for="male">Мужской</label>
+                  </div>
+                  <div>
+                      <input type="radio" id="female" name="gender" value="female" required>
+                      <label for="female">Женский</label>
+                  </div>
+                  
+                  <label for="occupation">Сфера деятельности:</label>
+                  <select id="occupation" name="occupation" required>
+                      <option value="">Выберите сферу деятельности</option>
+                      <option value="option1">IT</option>
+                      <option value="option2">Медицина</option>
+                      <option value="option3">Образование</option>
+                      <option value="option4">Не указано</option>
+                  </select>
+                  
+                  <button type="button" id="offer-btn">Предложение</button>
+                  
+                  <div id="offer-textarea-container" style="display: none;">
+                      <label for="offer">Предложение:</label>
+                      <textarea id="offer" name="offer" rows="5" cols="39" style="resize: none;"> </textarea>
+                  </div>
+                  
+                  <button type="submit">Отправить</button>
+              </form>
+          </div>
+        <footer>
+            <div class="media-icons">
+               <!--
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               --> 
+            </div>
+        </footer>
+        
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
