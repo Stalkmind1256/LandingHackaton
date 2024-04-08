@@ -1,32 +1,66 @@
-window.addEventListener('DOMContentLoaded', function() {
-  const checkbox = document.getElementById("image-checkbox");
-  const res1 = document.getElementById("res1");
-  const res2 = document.getElementById("res2");
+function toggleCheck(event) {
+  var totalPrice = 75000000;
+  var checkboxes = document.querySelectorAll('input[onclick="toggleCheck(event)"]');;
 
-  res1.classList.add('hide-screki');
-  res2.classList.add('hide-screki');
+  // Проходимся по всем чекбоксам и суммируем цену выбранных объектов
+  for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+          totalPrice -= parseInt(checkboxes[i].parentNode.querySelector('#price').innerText.match(/\d+/)[0]);
+          if (totalPrice < 0 ) {
+            event.preventDefault();
+            alert('Общая цена выбранных объектов превышает 75000000. Нельзя выбрать этот объект.');
+            return;
+          }
+        }
+  }
+  
+  // Обновляем общую цену
+  document.getElementById('totalPrice').innerText = 'Осталось: ' + totalPrice;
+}
 
-  // Обработчик события для чекбокса
-  checkbox.addEventListener('change', function() {
-    if (this.checked) {
-      
-      res1.classList.remove('hide-screki');
-      res2.classList.remove('hide-screki');
-    } else {
-      res1.classList.add('hide-screki');
-      res2.classList.add('hide-screki');
-    }
+let acceptbtn = document.getElementById('acceptvote');
+
+acceptbtn.addEventListener('click', function(){
+  acceptvote();
+  
+});
+
+function acceptvote(){
+  let checkboxes = document.querySelectorAll('input[name="objvote"]:checked');
+  let selectedobjects = [];
+  checkboxes.forEach(function(checkbox) {
+    selectedobjects.push(checkbox.value);
   });
-});
+  let objects = JSON.stringify(selectedobjects);
+  console.log(objects);
+  let firstname = document.getElementById('firstname').value;
+  let lastname = document.getElementById('lastname').value;
+  let patronymic = document.getElementById('patronymic').value;
+  let birthday = document.getElementById('birthday').value;
+  let gender = document.getElementById('gender').value;
+  let text = document.getElementById('text').value;
+  let votedate = new Date();
 
-//Функция создания textarea
-let offerTextareaContainer = document.getElementById('offer-textarea-container');
-let offerBtn = document.getElementById('offer-btn');
-
-offerBtn.addEventListener('click', function() {
-    if (offerTextareaContainer.style.display === 'none') {
-        offerTextareaContainer.style.display = 'block';
-    } else {
-        offerTextareaContainer.style.display = 'none';
+  $.ajax({
+    type: 'POST', 
+    url: 'insertbd.php',
+    data: {
+      selectedobjects: objects,
+      firstname: firstname,
+      lastname: lastname,
+      patronymic: patronymic,
+      birthday: birthday,
+      gender: gender,
+      text: text,
+      curdate: votedate,
+    },
+    success: function(result) { 
+        
+        $('#res').html(result);
+    },
+    error: function(xhr, status, error) {
+        console.error('Ошибка при выполнении AJAX-запроса:', status, error);
     }
 });
+
+}
